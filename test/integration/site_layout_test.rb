@@ -13,6 +13,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     # Not sure if test is necessary since he provides an alterate option
     get contact_path
     assert_select "title", full_title("Contact")
+    get signup_path
+    assert_select "title", full_title("Sign up")
   end
 
 end
